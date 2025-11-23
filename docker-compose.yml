@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  translator:
+    build: .
+    container_name: translate-bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
